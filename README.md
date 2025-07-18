@@ -14,20 +14,27 @@ scNiche is a computational framework to identify and characterize cell niches fr
 ### Create and activate conda environment with requirements installed.
 For scNiche, the Python version need is over 3.9. If you have already installed a lower version of Python, consider installing Anaconda, and then you can create a new environment.
 ```
-cd scNiche-main
+cd <navigate to software dir>
 
-conda env create -f scniche_dev.yaml -n scniche
+# clone repo
+git clone git@github.com:joreynajr/scNiche_vcu_cardinal.git
+
+# enter the scNiche folder
+cd scNiche
+
+conda env create -f scniche_dev.verisoned.yaml -n scniche
 conda activate scniche
 ```
 
 ### Install PyTorch and DGL
-We developed scNiche in a CUDA 11.3 environment. Here is an example of installing PyTorch and DGL with CUDA11.3:
+This version of scNiche uses CUDA 12.4. Here is an example of installing PyTorch and DGL with CUDA12.4:
 ```
 # install PyTorch
-pip install torch==1.12.1+cu113 --extra-index-url https://download.pytorch.org/whl/cu113
+pip install torch==2.4.0 torchvision==0.19.0 torchaudio==2.4.0 --index-url https://download.pytorch.org/whl/cu124
+
 
 # install DGL
-pip install dgl==1.1.0+cu113 -f https://data.dgl.ai/wheels/cu113/repo.html
+pip install  dgl -f https://data.dgl.ai/wheels/torch-2.4/cu124/repo.html
 ```
 The version of PyTorch and DGL should be suitable to the CUDA version of your machine. You can find the appropriate version on the [PyTorch](https://pytorch.org/get-started/locally/) and [DGL](https://www.dgl.ai/) website.
 
