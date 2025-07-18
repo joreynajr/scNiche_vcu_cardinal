@@ -20,7 +20,7 @@ cd <navigate to software dir>
 git clone git@github.com:joreynajr/scNiche_vcu_cardinal.git
 
 # enter the scNiche folder
-cd scNiche
+cd scNiche_vcu_cardinal
 
 conda env create -f scniche_dev.verisoned.yaml -n scniche
 conda activate scniche
